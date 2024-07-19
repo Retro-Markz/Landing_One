@@ -6,6 +6,7 @@
   --text-dark: #333333;
   --text-light: #767268;
   --white: #ffffff;
+  --max-width: 1200px;
   --header-font: "Bebas Neue", sans-serif;
 }
 
@@ -60,6 +61,7 @@ nav {
 
 .navLinks {
   position: absolute;
+
   left: 0;
   width: 100%;
   padding: 2rem;
@@ -99,15 +101,17 @@ nav {
     position: static;
     padding-block: 2rem 0;
     padding-inline: 1rem;
-    max-width: 95%;
+    max-width: var(--max-width);
     margin-inline: auto;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 2rem;
   }
+
   .navBar {
     flex: 1;
-    padding: 0;
+    padding: 0rem;
     background-color: transparent;
   }
 
@@ -142,13 +146,15 @@ nav {
 
   .navCta {
     display: flex;
+    flex: 1;
   }
 
   .navCta .btn {
-    padding: 4px 48px;
+    padding: 0.75rem 1.5rem;
     outline: none;
     border: none;
-    font-size: 16px;
+    font-size: 1rem;
+    white-space: nowrap;
     border-radius: 10px;
     transition: 0.3s;
     cursor: pointer;
