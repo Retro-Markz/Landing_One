@@ -211,6 +211,68 @@ nav {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
 }
 
+.headerContent .inputRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.headerContent .inputGroup {
+  flex: 1rem;
+}
+
+.headerContent .inputGroup h5 {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.headerContent .inputGroup > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerContent input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+}
+
+.headerContent input::placeholder {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.headerContent .inputGroup span {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.headerContent button {
+  width: 100%;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.headerContent button:hover {
+  background-color: var(--primary-color-dark);
+}
+
 @media (width > 768px) {
   nav {
     margin: 16px;
@@ -303,5 +365,19 @@ nav {
 
   .headerImage {
     grid-area: 1/2/2/3;
+  }
+
+  .headerContent :is(h1, p) {
+    text-align: left;
+  }
+}
+
+@media (width > 1024px) {
+  .headerContent form {
+    flex-direction: row;
+  }
+
+  .headerContent button {
+    width: fit-content;
   }
 }
